@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from calc .views import calc
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin', admin.site.urls),
+    path('calc', calc),
+    path('calc/<int:first_num>', calc),
+    path('calc/<int:first_num>/<str:operation>', calc),
+    path('calc/<int:first_num>/<str:operation>/<int:second_num>', calc)
 ]
