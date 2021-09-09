@@ -1,0 +1,13 @@
+{% block Title %}
+    Users
+{% endblock %}
+
+{% block Body %}
+    {% for foo in data %}
+        <br>
+        {{ foo.name }} {{ foo.age }}
+
+
+    {% endfor %}
+
+{% endblock %}
