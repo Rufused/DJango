@@ -19,6 +19,6 @@ from users.views import users, create
 
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('create/<str:name>/<int:age>/', create),
-    path('users/', users)
+    path('create/<str:name>/<int:age>', create),
+    path('users', users)
 ]
